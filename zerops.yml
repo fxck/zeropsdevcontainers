@@ -1,0 +1,19 @@
+expressapp:
+  build:
+    base: [ nodejs@16 ]
+    build:
+      - npm i
+      - ./node_modules/.bin/nx reset
+    deploy: [ ./ ]
+  run:
+    start: npm run start expressapp
+
+angularapp:
+  build:
+    base: [ nodejs@16 ]
+    build:
+      - npm i
+      - ./node_modules/.bin/nx reset
+    deploy: [ ./ ]
+  run:
+    start: npm run start angularapp
